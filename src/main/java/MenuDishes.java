@@ -1,12 +1,11 @@
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.ParseException;
 import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class MenuLoader {
+public class MenuDishes {
 
     public static ArrayList<Dish> loadMenuDishes(String filePath) {
         ArrayList<Dish> menuDishes = new ArrayList<Dish>();
@@ -30,7 +29,7 @@ public class MenuLoader {
 
                 menuDishes.add(new Dish(id, card, price, active));
             }
-        } catch (IOException | ParseException | org.json.simple.parser.ParseException e) {
+        } catch (IOException | org.json.simple.parser.ParseException e) {
             e.printStackTrace();
         }
 
