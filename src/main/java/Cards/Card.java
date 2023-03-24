@@ -1,3 +1,7 @@
+package Cards;
+
+import Operations.Operation;
+
 import java.util.ArrayList;
 
 public class Card {

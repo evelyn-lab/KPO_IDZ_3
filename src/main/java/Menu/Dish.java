@@ -1,3 +1,5 @@
+package Menu;
+
 public class Dish {
     private long id;
     private long card;

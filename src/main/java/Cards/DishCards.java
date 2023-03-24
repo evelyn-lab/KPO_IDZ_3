@@ -1,6 +1,11 @@
+package Cards;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import Operations.Operation;
+import Products.Product;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -41,9 +46,9 @@ public class DishCards {
                         JSONObject product = (JSONObject) productObj;
                         long prod_type = (long) product.get("prod_type");
                         double quantity = (double) product.get("prod_quantity");
-                        products.add(new Product(prod_type,"", "", "", quantity, 0,  "","",  false));
+                        products.add(new Product(0, prod_type, "", "", "", quantity, 0, "", "", false));
                     }
-                    operations.add(new Operation(type, oper_time, point, products));
+                    operations.add(new Operation(0, "", type, oper_time, point, products));
                 }
                 dishCards.add(new Card(id, name, description, time, equipment, operations));
             }

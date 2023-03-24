@@ -1,10 +1,15 @@
+package Agents;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class AgentManager {
     // Attributes
-    private List<OrderAgent> orders;
+    private List<AgentOrder> orders;
 
     // Constructor
     public AgentManager() {
-        this.orders = new ArrayList<OrderAgent>();
+        this.orders = new ArrayList<AgentOrder>();
     }
 
     // Methods

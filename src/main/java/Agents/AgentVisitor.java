@@ -1,3 +1,5 @@
+package Agents;
+
 public class AgentVisitor {
     // Attributes
     private String name;

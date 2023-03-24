@@ -1,5 +1,8 @@
+package Products;
+
 public class Product {
     private long id;
+    private long type;
     private String name;
     private String company;
     private String unit;
@@ -9,10 +12,11 @@ public class Product {
     private String valid_until;
     private boolean is_food;
 
-    public Product(long id, String name, String company, String unit, double quantity,
+    public Product(long id, long type, String name, String company, String unit, double quantity,
                    double cost, String delivered, String valid_until, boolean is_food) {
 
         setId(id);
+        setType(type);
         setName(name);
         setCompany(company);
         setUnit(unit);
@@ -32,6 +36,18 @@ public class Product {
             this.id = id;
         } else {
             this.id = 0;
+        }
+    }
+
+    public long getType() {
+        return type;
+    }
+
+    public void setType(long type) {
+        if (type != 0) {
+            this.type = type;
+        } else {
+            this.type = 0;
         }
     }
 
